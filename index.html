@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090e24">
+  <meta name="description" content="A premium live multi-currency converter. Convert one amount into 12 currencies at once.">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./style.css">
+  <title>Flux — Multi-Currency Converter</title>
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <main class="shell">
+    <header class="topbar">
+      <a class="brand" href="./" aria-label="Flux home"><span class="brand-mark">↗</span><span>flux<span class="brand-dot">.</span></span></a>
+      <div class="top-actions"><span class="live-pill"><i></i> LIVE RATES</span><button id="installBtn" class="install-btn" hidden>＋ Install app</button></div>
+    </header>
+    <section class="hero">
+      <div class="eyebrow"><span class="spark">✦</span> SMARTER CURRENCY CONVERSION</div>
+      <h1>One amount.<br><span>Twelve currencies.</span></h1>
+      <p class="subtitle">Convert once and compare every supported currency side by side.</p>
+    </section>
+    <section class="converter-card">
+      <div class="section-heading"><div><span class="step">01</span><h2>Your amount</h2></div><span class="micro-label">SOURCE CURRENCY</span></div>
+      <div class="amount-row">
+        <div class="amount-wrap"><label for="amount">AMOUNT</label><input id="amount" type="number" min="0" step="any" value="100" inputmode="decimal"></div>
+        <div class="base-wrap"><label for="base">FROM</label><select id="base"></select></div>
+      </div>
+      <button id="convertBtn" class="convert-btn"><span>Convert to all currencies</span><span class="arrow">↗</span></button>
+      <p id="status" class="status" role="status">Ready when you are.</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Currency</th><th>Converted amount</th><th>Rate for 1 <span id="rateBase">USD</span></th></tr></thead>
+          <tbody id="results">
+            <tr><td><span class="currency-badge">INR</span> Indian Rupee</td><td>—</td><td>—</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="footnote"><span>✦</span> Rates are provided by ExchangeRate-API. They may be delayed and are not trading quotes.</div>
+    </section>
+    <footer><span>FLUX CURRENCY TOOLS</span><span>Made for curious minds <b>✦</b></span></footer>
+  </main>
+  <script src="./app.js"></script>
+</body>
+</html>
