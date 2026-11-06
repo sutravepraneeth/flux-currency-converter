@@ -14,3 +14,30 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
+/* PREMIUM HEADLINE COLOURS */
+.hero h1 {
+    background: linear-gradient(90deg, #ffffff, #45e6d0, #718cff, #ffffff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* PREMIUM INSTALL BUTTON */
+.install-btn {
+    background: linear-gradient(135deg, #45e6d0, #477bff, #a855f7);
+    color: #ffffff;
+    border: none;
+    border-radius: 14px;
+    font-weight: 800;
+    box-shadow: 0 5px 25px rgba(69, 230, 208, 0.3);
+}
+
+/* FLUX LOGO */
+.brand-mark {
+    background: url("./icon-512.png") center / cover no-repeat;
+    width: 36px;
+    height: 36px;
+    display: inline-block;
+    border-radius: 10px;
+    flex-shrink: 0;
+}
