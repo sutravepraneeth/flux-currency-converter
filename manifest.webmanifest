@@ -9,5 +9,11 @@
   "orientation": "portrait-primary",
   "background_color": "#090e24",
   "theme_color": "#090e24",
-  "icons": [{"src":"./icon-512.png","sizes":"512x512","type":"image/png","purpose":"any"}]
+   "icons": [
+  {
+    "src": "icon-512.png",
+    "sizes": "512x512",
+    "type": "image/png"
+  }
+]
 }
