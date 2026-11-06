@@ -8,13 +8,7 @@
 @keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}@keyframes float{to{transform:translate(30px,-35px) scale(1.12)}}@media(max-width:650px){.shell{width:min(100% - 24px,540px)}.topbar{height:70px}.hero{padding:48px 4px 28px}h1{letter-spacing:-2.2px}.subtitle{font-size:13px;line-height:1.5}.converter-card{border-radius:22px;padding:18px}.amount-row{grid-template-columns:minmax(0,1fr) 130px;gap:8px}.amount-wrap,.base-wrap{padding:12px}.micro-label{font-size:8px}.live-pill{padding:8px;font-size:9px}.install-btn{font-size:11px;padding:9px 10px}footer{font-size:8px}}@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition:none!important}}
   /* Custom Aurora background */
  body {
-    background:
-      linear-gradient(
-        rgba(9, 14, 36, 0.55),
-        rgba(9, 14, 36, 0.65)
-      ),
-      url("./currency-bg.jpeg");
-
+    background-image: url("./currency-bg.jpeg")
     background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;
