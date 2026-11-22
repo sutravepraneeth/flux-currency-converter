@@ -53,6 +53,13 @@ button.addEventListener("click", async () => {
     }
     renderRows(value, baseCode, data.rates);
     saveConversionHistory(value, baseCode, data.rates);
+    localStorage.setItem(
+  `fluxRates_${baseCode}`,
+  JSON.stringify({
+    rates: data.rates,
+    updated: data.time_last_update_utc || new Date().toISOString()
+  })
+);
     statusText.textContent = `Conversion complete. ${data.time_last_update_utc ? "Rate data updated: " + data.time_last_update_utc : ""}`;
   } catch (error) {
     statusText.textContent = "Could not fetch rates. Check your internet connection and try again.";
