@@ -279,6 +279,33 @@ body {
 .table-wrap th {
     color: #493326 !important;
 }
+/* FLUX - Full Champagne Background */
+
+html,
+body {
+    background: #E8D5B7 !important;
+    background-image: none !important;
+    color: #493326 !important;
+}
+
+/* Main page sections */
+main,
+.app,
+.container,
+.page-wrapper {
+    background: transparent !important;
+}
+
+/* Heading and description */
+h1, h2, h3, p {
+    color: #493326;
+}
+
+/* Keep converter card elegant */
+.converter-card {
+    background: #D1B18C !important;
+    border: 1px solid #B9956D;
+}
 
 .table-wrap td {
     color: #5B4032 !important;
