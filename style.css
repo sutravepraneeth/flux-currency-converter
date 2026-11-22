@@ -189,3 +189,44 @@ body {
     );
     color: #FFFFFF;
 }
+/* FLUX CHOCOLATE BROWN CARD */
+
+.converter-card {
+    background: linear-gradient(
+        145deg,
+        #76543D,
+        #503727
+    ) !important;
+
+    color: #FFF4E6 !important;
+    border: 1px solid #A77C55 !important;
+
+    box-shadow: 0 18px 40px
+        rgba(75, 45, 25, 0.20);
+}
+
+.converter-card h2,
+.converter-card label,
+.converter-card .micro-label {
+    color: #FFF4E6 !important;
+}
+
+.amount-wrap,
+.base-wrap {
+    background: #503727 !important;
+    border: 1px solid #A77C55 !important;
+}
+
+.amount-wrap input,
+.base-wrap select {
+    color: #FFF4E6 !important;
+}
+
+.convert-btn {
+    background: linear-gradient(
+        135deg,
+        #D1A66E,
+        #A97943
+    ) !important;
+    color: #FFFFFF !important;
+}
