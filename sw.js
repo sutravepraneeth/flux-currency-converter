@@ -1,4 +1,4 @@
-const CACHE = "flux-multi-pwa-v1";
+const CACHE = "flux-multi-pwa-v2";
 const CORE = ["./","./index.html","./style.css","./app.js","./manifest.webmanifest","./icon.svg"];
 self.addEventListener("install", event => {
   event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(CORE)));
