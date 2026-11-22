@@ -61,9 +61,30 @@ button.addEventListener("click", async () => {
   })
 );
     statusText.textContent = `Conversion complete. ${data.time_last_update_utc ? "Rate data updated: " + data.time_last_update_utc : ""}`;
-  } catch (error) {
-    statusText.textContent = "Could not fetch rates. Check your internet connection and try again.";
+   } catch (error) {
+    const saved = localStorage.getItem(`fluxRates_${baseCode}`);
+
+    if (saved) {
+        try {
+            const cached = JSON.parse(saved);
+
+            if (cached.rates) {
+                renderRows(value, baseCode, cached.rates);
+                statusText.textContent =
+                    "Offline mode: Showing previously saved exchange rates.";
+            } else {
+                statusText.textContent = "Saved rates are unavailable.";
+            }
+        } catch {
+            statusText.textContent = "Unable to load saved exchange rates.";
+        }
+    } else {
+        statusText.textContent =
+            "No saved rates. Connect to the internet once to enable offline conversion.";
+    }
+
     console.error(error);
+     
   } finally {
     button.disabled = false;
     button.querySelector("span:first-child").textContent = "Convert to all currencies";
