@@ -255,3 +255,31 @@ body {
 .table-wrap td + td {
     border-left: 2px solid #A77C55 !important;
 }
+/* FLUX - Warm Champagne Theme */
+
+body {
+    background: linear-gradient(
+        135deg,
+        #F3E6D2,
+        #E8D5B7,
+        #DCC3A3
+    ) !important;
+    color: #493326 !important;
+}
+
+/* Table background */
+.table-wrap {
+    background: #F8F0E5 !important;
+    border: 1px solid #C9A77D !important;
+    border-radius: 18px;
+    overflow-x: auto;
+}
+
+/* Table text */
+.table-wrap th {
+    color: #493326 !important;
+}
+
+.table-wrap td {
+    color: #5B4032 !important;
+}
