@@ -230,3 +230,28 @@ body {
     ) !important;
     color: #FFFFFF !important;
 }
+/* COMPLETE FLUX TABLE GRID */
+
+.table-wrap table {
+    border-collapse: collapse !important;
+    width: 100%;
+}
+
+.table-wrap th,
+.table-wrap td {
+    border: 1px solid rgba(181, 138, 85, 0.45) !important;
+    padding: 16px 12px !important;
+}
+
+/* Stronger heading divider */
+
+.table-wrap thead th {
+    border-bottom: 2px solid #B58A55 !important;
+}
+
+/* Consistent vertical separators */
+
+.table-wrap th + th,
+.table-wrap td + td {
+    border-left: 2px solid #A77C55 !important;
+}
