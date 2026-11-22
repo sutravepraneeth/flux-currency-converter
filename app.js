@@ -110,3 +110,63 @@ function saveConversionHistory(value, baseCode, rates) {
         JSON.stringify(history.slice(0, 50))
     );
 }
+// DISPLAY CONVERSION HISTORY
+
+function renderFluxHistory() {
+    const list = document.getElementById("historyList");
+    if (!list) return;
+
+    list.replaceChildren();
+
+    let history = [];
+
+    try {
+        history = JSON.parse(
+            localStorage.getItem("fluxHistory") || "[]"
+        );
+    } catch {
+        history = [];
+    }
+
+    if (!Array.isArray(history) || history.length === 0) {
+        list.textContent = "No conversion history yet.";
+        return;
+    }
+
+    history.forEach(item => {
+        const card = document.createElement("div");
+        card.className = "history-item";
+
+        const heading = document.createElement("strong");
+        heading.textContent =
+            `${item.amount} ${item.base} → 12 currencies`;
+
+        const date = document.createElement("p");
+        date.textContent =
+            new Date(item.date).toLocaleString();
+
+        card.append(heading, date);
+        list.appendChild(card);
+    });
+}
+
+// HISTORY BUTTON FUNCTIONALITY
+
+document.getElementById("historyBtn")
+    ?.addEventListener("click", () => {
+        const panel = document.getElementById("historyPanel");
+
+        panel.hidden = !panel.hidden;
+
+        renderFluxHistory();
+    });
+
+// CLEAR HISTORY BUTTON
+
+document.getElementById("clearHistoryBtn")
+    ?.addEventListener("click", () => {
+        if (confirm("Are you sure you want to clear history?")) {
+            localStorage.removeItem("fluxHistory");
+            renderFluxHistory();
+        }
+    });
