@@ -71,3 +71,58 @@ button, input, select {
     font-family: 'Inter', sans-serif;
     font-weight: 600;
 }
+
+/* FLUX CONVERSION HISTORY */
+
+.history-section {
+    margin-top: 24px;
+}
+
+.history-btn {
+    background: linear-gradient(135deg, #0088CC, #0066CC);
+    color: #FFFFFF;
+    border: none;
+    padding: 13px 22px;
+    border-radius: 12px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.history-panel {
+    margin-top: 16px;
+    padding: 20px;
+    background: #F8FAFC;
+    border: 1px solid #DCE7F5;
+    border-radius: 18px;
+    color: #102A43;
+}
+
+.history-panel h2 {
+    color: #102A43;
+}
+
+.history-item {
+    background: #FFFFFF;
+    padding: 14px;
+    margin: 12px 0;
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+}
+
+.history-item p {
+    color: #64748B;
+    font-size: 13px;
+}
+
+.clear-history-btn {
+    background: #FFF0F0;
+    color: #D62828;
+    border: 1px solid #FFD0D0;
+    padding: 11px 18px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.history-panel[hidden] {
+    display: none;
+}
