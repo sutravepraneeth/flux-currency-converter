@@ -52,6 +52,7 @@ button.addEventListener("click", async () => {
       if (code !== baseCode && !Number.isFinite(Number(data.rates[code]))) throw new Error(`Rate unavailable for ${code}.`);
     }
     renderRows(value, baseCode, data.rates);
+    saveConversionHistory(value, baseCode, data.rates);
     statusText.textContent = `Conversion complete. ${data.time_last_update_utc ? "Rate data updated: " + data.time_last_update_utc : ""}`;
   } catch (error) {
     statusText.textContent = "Could not fetch rates. Check your internet connection and try again.";
@@ -83,4 +84,29 @@ window.addEventListener("appinstalled", () => {
 });
 if ("serviceWorker" in navigator && location.protocol.startsWith("http")) {
   window.addEventListener("load", () => navigator.serviceWorker.register("./sw.js").catch(err => console.warn("Service worker registration failed:",err)));
+}
+// FLUX CONVERSION HISTORY
+
+function saveConversionHistory(value, baseCode, rates) {
+    let history = [];
+
+    try {
+        history = JSON.parse(
+            localStorage.getItem("fluxHistory") || "[]"
+        );
+    } catch (error) {
+        history = [];
+    }
+
+    history.unshift({
+        amount: value,
+        base: baseCode,
+        rates: rates,
+        date: new Date().toISOString()
+    });
+
+    localStorage.setItem(
+        "fluxHistory",
+        JSON.stringify(history.slice(0, 50))
+    );
 }
