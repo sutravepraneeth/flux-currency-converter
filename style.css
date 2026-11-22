@@ -126,3 +126,66 @@ button, input, select {
 .history-panel[hidden] {
     display: none;
 }
+
+/* =================================
+   FLUX CHAMPAGNE PREMIUM THEME
+   ================================= */
+
+body {
+    background: linear-gradient(
+        135deg,
+        #F2E9DD,
+        #E9DFD3,
+        #E2D3C0
+    ) !important;
+    background-attachment: fixed;
+    color: #39332D;
+}
+
+/* Matching champagne converter card */
+
+.converter-card {
+    background: linear-gradient(
+        145deg,
+        #F3EADF,
+        #E3D5C3
+    ) !important;
+    border: 1px solid rgba(181, 138, 85, 0.30);
+    box-shadow: 0 15px 40px rgba(91, 67, 42, 0.12);
+    color: #39332D;
+}
+
+/* Amount and currency input areas */
+
+.amount-wrap,
+.base-wrap {
+    background: rgba(255, 250, 243, 0.75);
+    border: 1px solid rgba(181, 138, 85, 0.25);
+    border-radius: 14px;
+}
+
+/* Input text */
+
+.amount-wrap input,
+.base-wrap select {
+    color: #39332D;
+}
+
+/* History panel */
+
+.history-panel {
+    background: #F3EADF;
+    color: #39332D;
+    border: 1px solid #D9C7AE;
+}
+
+/* Premium gold accent */
+
+.history-btn {
+    background: linear-gradient(
+        135deg,
+        #B58A55,
+        #D2AF7B
+    );
+    color: #FFFFFF;
+}
